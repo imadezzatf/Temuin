@@ -1,0 +1,24 @@
+@import '/vendor/filament/filament/resources/css/theme.css';
+
+:root {
+    --primary-500: #2f6f44;
+}
+
+.fi-sidebar {
+    background: #ffffff;
+    border-right: 1px solid #e5e7eb;
+}
+
+.fi-topbar {
+    background: rgba(255,255,255,.85);
+    backdrop-filter: blur(12px);
+}
+
+.fi-section,
+.fi-card {
+    border-radius: 20px;
+}
+
+.fi-btn {
+    border-radius: 12px;
+}
