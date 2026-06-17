@@ -24,7 +24,6 @@ class FoundItemForm
                 Select::make('category_id')
                     ->label('Kategori')
                     ->relationship('category', 'name')
-                    ->searchable()
                     ->required(),
 
                 FileUpload::make('photo')
@@ -35,6 +34,15 @@ class FoundItemForm
 
                 Textarea::make('description')
                     ->label('Deskripsi'),
+
+                TextInput::make('reporter_name')
+                    ->label('Nama Penemu')
+                    ->required(),
+                
+                TextInput::make('reporter_phone')
+                    ->label('Kontak Penemu')
+                    ->tel()
+                    ->required(),
 
                 TextInput::make('location_found')
                     ->label('Lokasi Ditemukan')
