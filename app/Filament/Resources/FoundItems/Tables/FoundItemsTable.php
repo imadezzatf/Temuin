@@ -7,12 +7,14 @@ use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Tables\Table;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\ImageColumn;
 
 class FoundItemsTable
 {
     public static function configure(Table $table): Table
     {
         return $table
+            ->defaultSort('found_at', 'desc')
             ->columns([
 
                 TextColumn::make('item_name')
@@ -34,6 +36,11 @@ class FoundItemsTable
                     ->label('Tag / Ciri')
                     ->badge()
                     ->separator(','),
+                ImageColumn::make('photo')
+                    ->label('Foto')
+                    ->disk('public')
+                    ->visibility('public')
+                    ->width(80),
             ])
             ->recordActions([
                 EditAction::make(),

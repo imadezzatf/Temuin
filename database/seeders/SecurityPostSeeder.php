@@ -9,11 +9,11 @@ class SecurityPostSeeder extends Seeder
 {
     public function run(): void
     {
-        SecurityPost::create([
+        SecurityPost::firstOrCreate([
             'name' => 'Satpam Gerbang'
         ]);
 
-        SecurityPost::create([
+        SecurityPost::firstOrCreate([
             'name' => 'Satpam Parkiran'
         ]);
     }

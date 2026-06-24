@@ -24,9 +24,6 @@ class UsersTable
                     ->label('Role Spatie')
                     ->badge()
                     ->color('success'),
-                TextColumn::make('role')
-                    ->label('Status Enum')
-                    ->badge(),
             ])
             ->filters([
                 //

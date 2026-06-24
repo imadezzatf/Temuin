@@ -12,16 +12,12 @@ class CategorySeeder extends Seeder
         $categories = [
             'Elektronik',
             'Dompet',
-            'Tas',
             'Kunci',
-            'Kartu Identitas',
-            'Botol Minum',
-            'Aksesoris',
-            'Lainnya'
+            'Pakaian',
         ];
 
         foreach ($categories as $category) {
-            Category::create([
+            Category::firstOrCreate([
                 'name' => $category
             ]);
         }

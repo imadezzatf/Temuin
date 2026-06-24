@@ -9,6 +9,7 @@ use Filament\Resources\Pages\EditRecord;
 class EditClaimRequest extends EditRecord
 {
     protected static string $resource = ClaimRequestResource::class;
+    
 
     protected function getHeaderActions(): array
     {

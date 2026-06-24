@@ -9,11 +9,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use App\Models\ClaimRequest;
-use Spatie\Permission\Traits\HasRoles; // <--- 1. TAMBAHKAN IMPORT INI
+use Spatie\Permission\Traits\HasRoles; 
 
 class User extends Authenticatable implements FilamentUser
 {
-    // <--- 2. TAMBAHKAN HASROLES DI DALAM SINI JUGAA
     use HasFactory, Notifiable, HasRoles; 
 
     protected $fillable = [

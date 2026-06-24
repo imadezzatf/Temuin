@@ -32,14 +32,6 @@ class UserForm
                     ->required(fn (string $context): bool => $context === 'create')
                     ->maxLength(255),
 
-                Select::make('role')
-                    ->label('Akses Fitur (Enum Bawaan)')
-                    ->options([
-                        'admin' => 'Admin (Bisa Masuk Panel)',
-                        'user' => 'User (Hanya Frontend)',
-                    ])
-                    ->required()
-                    ->default('admin'),
 
                 // Hubungkan langsung ke Spatie Roles
                 Select::make('roles')
